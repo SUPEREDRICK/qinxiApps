@@ -1,0 +1,61 @@
+<view class='project'>
+  <view class='list'>状况跟踪</view>
+  <view class='name'>
+    <view class='name2'>
+      <view class='Garden '></view>
+      <view class='text'>等待支付</view>
+      <view class='text2'>2018-09-25 10:24</view>
+    </view>
+  </view>
+
+  <view class='name'>
+    <view class='name2'>
+      <view class='Garden '></view>
+      <view class='text'>支付成功</view>
+      <view class='text2'>2018-09-25 10:24</view>
+    </view>
+  </view>
+
+  <view class='name'>
+    <view class='name2'>
+      <view class='Garden '></view>
+      <view class='text'>等待客服处理</view>
+      <view class='text2'>2018-09-25 10:24</view>
+    </view>
+  </view>
+
+  <view class='name'>
+    <view class='name2'>
+      <view class='Garden '></view>
+      <view class='text'>客服接单</view>
+      <view class='text2'>2018-09-25 10:24</view>
+    </view>
+  </view>
+
+  <view class='name'>
+    <view class='name2'>
+      <view class='Garden '></view>
+      <view class='text'>已发货</view>
+      <view class='text2'>2018-09-25 10:24</view>
+    </view>
+
+  </view><view class='name'>
+    <view class='name2'>
+      <view class='Garden '></view>
+      <view class='text'>运输中</view>
+      <view class='text2'>2018-09-25 10:24</view>
+    </view>
+  </view>
+
+  <view class='name3'>
+    <view class='name2'>
+      <view class='Garden2 '></view>
+      <view class='text'>订单已送达</view>
+      <view class='text2'>2018-09-25 10:24</view>
+    </view>
+  </view>
+  
+</view>
+<view>
+  <button class='button'>关 闭</button>
+</view>

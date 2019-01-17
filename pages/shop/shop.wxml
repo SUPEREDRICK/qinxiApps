@@ -1,0 +1,78 @@
+<!--pages/shop/shop.wxml-->
+<view>
+  <!-- 顶层轮播图 -->
+   <swiper class='swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{imgUrls}}" class='swiper-image'>
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  
+  <!-- 个人商城入口和优惠窗口 以下暂停开放 -->
+  <!-- <view class='shop'>
+    <view class='shopert'>
+      <view class='shopin'>
+        <view class='title'>
+          <view class='title-main'>口袋御翠府</view>
+          <view class='title-next'>实现你的店主梦</view>
+        </view>
+        <image src='/pages/images/shopicon.png' class='shopimg'></image>
+      </view>
+    </view> -->
+
+  <!-- 优惠窗口入口 -->
+    <!-- <view class='shopert-noused'>
+      <view class='shopin'>
+        <view class='title'>
+          <view class='title-main'>口袋御翠府</view>
+          <view class='title-next'>实现你的店主梦</view>
+        </view>
+        <image src='/pages/images/redpage.png' class='shopimg'></image>
+      </view>
+    </view>
+  </view> -->
+
+  <!-- 横向滑动列表 -->
+  <scroll-view scroll-x='true' class="scroll-x">
+        <view wx:for="{{typelist}}" wx:key="{{index}}" class="view-parent">
+          <view class="view-item" data-id="{{item.prdtype}}" bindtap='toprdlist'>{{item.prdtype}} </view>
+        </view>
+   </scroll-view>
+
+  <view class='line'></view>
+
+  <!-- 商品tab列表 -->
+  <view class="section">
+    <!-- 左侧类型 -->
+    <scroll-view scroll-y="true" class="left">
+      <!-- <view wx:for="{{types}}" :key="{{index}}" data-id="{{item.id}}" bindtap="" class="{{item.type == true ? 'active' : ''}}" style="font-size:33rpx">
+        {{item.prdname}}{{index}}
+      </view> -->
+
+      <view wx:for="{{secondTypes}}" :key="{{index}}" data-id="{{item.id}}" bindtap="showList" class="{{item.type == true ? 'active' : ''}}" style="font-size:33rpx" wx:if='{{item.style == true ? true : false}}'>
+        <view>{{item.prdname}}{{index}}</view>
+      </view>
+
+       <view wx:for="{{threeTypes}}" :key="{{index}}" style="font-size:33rpx" wx:if='{{secondMenuStyle}}'>
+        <view>{{item.prdname}}{{index}}</view>
+      </view>
+    </scroll-view>
+    
+    <!-- 右侧数据 -->
+    <scroll-view scroll-y="true" class="right">
+    <view class="options">
+      <view class="option" wx:for="{{types}}" wx:for-item="data">
+          <!-- 此处是商品选项单元格及商品信息陈列，点击进去获取id传递到跳转的详情页面中 -->
+          <navigator url="/pages/shopdtl/shopdtl?id={{data.id}}" wx:key="typeId" class="item">
+            <image src='http://i1.fuimg.com/650899/c75d6c234213cc5a.png' class='entrance'></image>
+            <image src="http://i1.fuimg.com/650899/0ba0dc4561e9d5f9.png" bindtap='test' class='prdpic'></image>
+            <view class='prdname'>{{data.prdname}}</view>
+            <view class='prdsimdes'>{{data.prdsimdes}}</view>
+            <view class='prdprice'>{{data.prdprice}}</view>
+          </navigator>
+      </view>
+    </view>
+    </scroll-view>
+  </view>
+</view>

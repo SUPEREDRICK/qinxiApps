@@ -1,0 +1,40 @@
+<!--pages/shopcart/shopcart.wxml-->
+  <view class='mainTitle'>
+    <view class='contentText'>购物车</view>
+  </view>
+
+  <!-- 隔空 -->
+  <view class='brand'></view>
+
+  <!-- 列项 -->
+  <view wx:for="{{items}}">
+    <view class='item'>
+      <view class='itemBox'>
+        <view class='selected'></view>
+        <text class='itemTitle'>时尚观音莲花吊项（产品类型）</text>
+      </view>
+      <view class='prdNameBox'>时尚观音莲花吊坠 华贵护身 时尚别致</view>
+      <image src='http://i1.fuimg.com/650899/a348205a4725dd50.jpg' class='itemImg'></image>
+      <view class='prdSize'>
+        <text>内径∅50-52mm 免邮费</text>
+      </view>
+      <view class='price'>￥895.5</view>
+      <view class='buttomBox'>
+        <view class='buttonFirst'>+</view>
+        <view class='buttonMid'>2</view>
+        <view class='buttonLastOne'>-</view>
+      </view>
+    </view>
+    <!-- 列项 ending -->
+  </view>
+  <!-- 支撑作用 -->
+  <view class='brace'></view>
+  <!-- 底部操作盘 -->
+  <view class='counter'>
+    <view class='selectedAll'></view>
+    <view class='selectAllTitle'>全选</view>
+    <view class='countAllPrice'>￥895</view>
+    <view class='countAllTitle'>合计:</view>
+    <view class='delieveFee'>运费:￥0</view>
+    <view class='buttomCount'>结算</view>
+  </view> 

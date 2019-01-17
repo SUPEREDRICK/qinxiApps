@@ -1,0 +1,36 @@
+.pocr{
+  padding: 20rpx;
+  width: 710rpx;
+  height: 180rpx;
+  border-bottom: 2rpx solid #D1D1D1;
+  font-size: 34rpx;
+  color: #696969;
+  display: flex;
+  justify-content: conter;
+  flex-wrap: wrap;
+}
+.box1{
+  height: 60rpx;
+  width: 510rpx;
+  color: #1F1F1F;
+  font-weight: 600;
+}
+.box2{
+  height: 60rpx;
+  width: 150rpx;
+
+}
+.box3{
+  margin-top: 14rpx;
+  width: 20rpx;
+  height: 20rpx;
+  border-left: 1rpx solid #D1D1D1;
+  border-top: 1rpx solid #D1D1D1;
+  transform: rotate(135deg)
+  
+}
+.box4{
+  height: 60rpx;
+  width: 710rpx;
+
+}

@@ -1,0 +1,104 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.0",
+	"appid": "wx56d27f902ec2fb66",
+	"projectname": "%E5%8F%A3%E8%A2%8B%E5%BE%A1%E7%BF%A0%E5%BA%9C%E5%B0%8F%E7%A8%8B%E5%BA%8F",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 9,
+			"list": [
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "发现",
+					"pathName": "pages/find/find",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "拍卖",
+					"pathName": "pages/auction/auction",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "订单状态",
+					"pathName": "pages/OrderStatus/OrderStatus",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我去过的店",
+					"pathName": "pages/store/store",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的粉丝",
+					"pathName": "pages/Fans/Fans",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "配送订单",
+					"pathName": "pages/DeliveryOrder/DeliveryOrder",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "交易详情",
+					"pathName": "pages/transactionDetails/transactionDetails",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的优惠券",
+					"pathName": "pages/MyCoupon/MyCoupon",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的店铺",
+					"pathName": "pages/personalstores/personalstores"
+				}
+			]
+		}
+	}
+}

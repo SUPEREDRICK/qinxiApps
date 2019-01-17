@@ -1,0 +1,373 @@
+/* pages/auctionDtl/auctionDtl.wxss */
+/*轮播图主要部分*/
+.swiper {
+  width: 100%;
+  height: 400rpx;
+}
+
+.swiper-image {
+  height: 100%;
+  width: 100%;
+}
+
+/* 轮播图迭代图片部分 */
+.slide-image{
+   height: 100%;
+   width: 100%;
+}
+
+/* 显示拍卖起步价格和截至时间 */
+.boardcast {
+  width:100%;
+  height: 80rpx;
+  background-color: rgb(241, 23, 23);
+  line-height: 80rpx;
+}
+
+/*当前出价部分文字设定*/
+.currentBid {
+  font-size: 30rpx;
+  color: white;
+  margin-left: 21rpx;
+}
+
+/* 距离结束还有**设置 */
+.endingTime {
+  font-size: 30rpx;
+  color:white;
+  margin-left: 255rpx;
+}
+
+/* 分割线设置 */
+.cuttingLine {
+  background-color: #f5f5f5;
+  width:100%;
+  height: 18rpx;
+}
+
+/* 主要告示栏：产品名，起步拍卖价格等等信息 */
+.mainboard {
+  width:100%;
+  height: 140rpx;
+}
+
+/* 主要告示栏产品名称设置 */
+.prdname {
+  font-size: 32rpx;
+  margin-left: 30rpx;
+}
+
+/*主要告示栏拍卖价格设置*/
+.prdname {
+  font-size: 32rpx;
+}
+
+/* 主要告示栏 幅度 起拍价设置 */
+.mainboard text {
+  font-size: 25rpx;
+  color: #9a9797;
+}
+
+/* 加价幅度单独设置 */
+.addRange {
+  margin-left: 100rpx;
+}
+
+/* 起拍价单独设置 */
+.startPrcie {
+  margin-left: 150rpx;
+}
+
+/* 玉友群聊设置 */
+.wechatGroup {
+  width: 205rpx;
+  height: 70rpx;
+  background-color: #00b947;
+  display: inline-block;
+  margin-top: 15rpx;
+  margin-right: 70rpx;
+  float: right;
+  border-radius: 10rpx;
+}
+
+/* 微信app icon */
+.wechaticon {
+  margin-top: 8rpx;
+  margin-left: 10rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+/* 微信交流群字样 */
+.groupchat {
+  font-size: 30rpx;
+  float: right;
+  margin-top: 20rpx;
+  margin-right: 10rpx;
+  color: white;
+}
+
+/* 加价幅度和起拍价 */
+.rangeNprice {
+  float: left;
+  margin-left: 70rpx;
+  margin-top: -8rpx;
+}
+
+/* 设置加价幅度和起拍价的文字 */
+.rangeNprice text {
+  font-size: 40rpx;
+}
+
+.startPrice {
+  margin-left: 79rpx;
+  color: white;
+}
+
+.listPrice {
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 1rpx solid rgba(201, 198, 198, 0.473);
+  display: flex;
+  align-items:center;
+}
+
+.listTitle {
+  font-size: 33rpx;
+  margin-left: 30rpx;
+}
+
+.list-item {
+  width: 100%;
+  height: 110rpx;
+  border-bottom: 1rpx solid rgba(201, 198, 198, 0.473);
+}
+
+.itemImg {
+  width: 90rpx;
+  height: 90rpx;
+  margin-top: 10rpx;
+  float: left;
+  margin-left: 20rpx;
+}
+
+.whoNprice {
+  display: inline-block;
+  margin-top: 15rpx;
+  margin-left: 15rpx;
+}
+
+.who {
+  font-size: 25rpx;
+}
+
+.aucPrice {
+  margin-top: 4rpx;
+  font-size: 30rpx;
+}
+
+.state {
+  width: 80rpx;
+  height: 45rpx;
+  background-color: #eb2222;
+  font-size: 30rpx;
+  float: right;
+  margin-top: 15rpx;
+  margin-right: 20rpx;
+  border-radius: 5rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.acDate {
+  font-size: 25rpx;
+  margin-top: 65rpx;
+  margin-right: -79rpx;
+  display: inline-block;
+  float: right;
+}
+
+.forMore {
+  font-size: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80rpx;
+  border-bottom: 1rpx solid rgba(201, 198, 198, 0.473);
+}
+
+/* 商品参数标题 */
+.shopParamTitle {
+  font-size: 33rpx;
+  margin-left: 30rpx;
+  margin-top: 10rpx;
+}
+
+/* 商品参数标题外边框 */
+.paramBox {
+  width: 715rpx;
+  height: 60rpx;
+  background-color: #f5f5f5;
+  margin:0 auto;
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.paramLeft {
+  font-size: 30rpx;
+  margin-left: 40rpx;
+}
+
+.paramRight {
+  font-size: 30rpx;
+  margin-left: 80rpx;
+}
+
+/* 认证部分设定 */
+.authentication {
+  width: 100%rpx;
+  height: 100rpx;
+  border-top: 1rpx solid #f5f5f5;
+  margin-top: 20rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+  display:flex;
+  align-items: center;
+}
+
+.authImg {
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 20rpx;
+  float: left;
+}
+
+.authTitle {
+  font-size: 28rpx;
+  margin-left: 10rpx;
+  float: left;
+  margin-top: 25rpx;
+}
+
+.distance {
+  margin-left: 15rpx;
+}
+
+/* 产品介绍标题 */
+.prdintro {
+  font-size: 33rpx;
+  margin-left: 30rpx;
+  margin-top: 10rpx;
+}
+
+.textContent {
+  width:720rpx;
+  height: auto;
+  margin: 0 auto;
+  text-indent: 2em;
+  font-size: 28rpx;
+  margin-top: 8rpx;
+}
+
+.imgboxs image {
+  width: 720rpx;
+  height: 720rpx;
+  margin-left: 15rpx;
+  margin-top: 0rpx;
+}
+
+/* 准备拍卖产品列表标题 */
+.willAuctionsTitle {
+  font-size: 33rpx;
+  margin-left: 30rpx;
+  margin-top: 10rpx;
+}
+
+/* 准备拍卖商品列表整体展示框 */
+.scroll-x {
+    height: 460rpx;
+    white-space:nowrap;
+    display:flex;
+}
+
+.view-parent {
+    display:inline-block;
+}
+
+.view-item {
+    width:300rpx;
+    height:370rpx;
+    color:#222;
+    margin:10px;
+}
+
+.willAuctionImg {
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.willtitle {
+  font-size: 25rpx;
+  width: 100rpx;
+}
+
+.willtime {
+  font-size: 23rpx;
+  width: 100rpx;
+  color: rgba(128, 128, 128, 0.603);
+}
+
+.bottonNav {
+  width: 100%;
+  height: 80rpx;
+  background: #f5f5f5;
+  position: fixed;
+  bottom: 0rpx;
+}
+
+.toIndex {
+  border-right: 1rpx solid rgba(177, 172, 172, 0.363);
+  width: 80rpx;
+  height: 80rpx;
+  float: left;
+  text-align: center;
+}
+
+.toIndexImg {
+  width: 45rpx;
+  height: 45rpx;
+  margin-top:4rpx;
+}
+
+.toIndexTitle {
+  font-size: 20rpx;
+  color: #cdcdcd;
+  float: left;
+  margin-left: 20rpx;
+  margin-top: -5rpx;
+}
+
+.joinAu {
+  float: left;
+  width: 300rpx;
+  height: 80rpx;
+  background-color: #38634f;
+  color:white;
+  font-size: 33rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payAuthbox {
+  font-size: 29rpx;
+  background-color: #38634f;
+  width: 206rpx;
+  height: 80rpx;
+  float: left;
+  color: white;
+  text-align: center;
+}
+

@@ -1,0 +1,146 @@
+.nav-img{
+  width: 100%;
+  height: 360rpx;
+  /* box-shadow: 1rpx 1rpx 1rpx 1rpx rgb(197, 197, 197); */
+}
+.list{
+  position:absolute; 
+  height: 160rpx;
+  width: 615rpx;
+  padding: 40rpx  70rpx;
+  border-bottom: 2rpx solid #D2D2D2;
+}
+.list2{
+  display: flex;
+  justify-content:start;
+  flex-wrap: wrap;
+  margin-top: 240rpx;
+  width: 750rpx;
+  height: 300rpx;
+}
+
+.img{
+  margin-left: 8rpx;
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.img2{
+  margin-left: 4rpx;
+  width: 32rpx;
+  height: 30rpx;
+  margin-right: 8rpx;
+}
+.img3{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 8rpx;
+  margin-left: 30rpx;
+}
+.img4{
+  width: 150rpx;
+  height: 150rpx;
+}
+.img5{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 8rpx;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  width: 160rpx;
+  height: 40rpx;
+  margin-left: 14rpx;
+  font-weight: 400;
+ 
+}
+
+.name view {
+  font-size: 30rpx;
+  width: 139rpx;
+  height: 38rpx;
+}
+
+.classification{
+  margin-top: 25rpx;
+  font-size: 30rpx;
+  color: #000000;
+  height: 50rpx;
+  width: 400rpx;
+   display: flex;
+  align-items: center;
+}
+.classification2{
+  margin-top: 5rpx;
+  font-size: 33rpx;
+  color: #000000;
+  height: 50rpx;
+  width: 400rpx;
+   display: flex;
+  align-items: center;
+}
+
+.QRcode{
+  position: relative;
+  top: -155rpx;
+  left: 470rpx;
+  height: 120rpx;
+  width: 120rpx;
+}
+
+.project-img{
+  margin-top: 40rpx;
+  width: 130rpx;
+  height: 130rpx;
+}
+
+.box {
+  font-size: 26rpx;
+  width: 160rpx;
+  height: 40rpx;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project {
+  width: 249rpx;
+  height: 228rpx;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.line{
+height: 228rpx;
+width: 2px;
+background: -webkit-linear-gradient(top,rgba(255, 255, 255, 0),#DDDDDD,rgba(255,255,255,0));
+background: linear-gradient(to bottom, rgba(255, 255, 255, 0),#DDDDDD,rgba(255,255,255,0));
+position: absolute;
+left: 245rpx;
+top: 0rpx;
+}
+.line2{
+height: 2rpx;
+width: 750px;
+background: -webkit-linear-gradient(left,rgba(255, 255, 255, 0),#DDDDDD,rgba(255,255,255,0));
+background: linear-gradient(to right, rgba(255, 255, 255, 0),#DDDDDD,rgba(255,255,255,0));
+}
+/* 客服功能 */
+.services {
+  width: 235rpx;
+  height: 56rpx;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  margin-left: -37rpx;
+  font-size: 30rpx;
+}
+/* 消除按钮边框 */
+button::after {
+  border: none;
+}

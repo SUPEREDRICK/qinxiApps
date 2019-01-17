@@ -1,0 +1,87 @@
+/* pages/transactionDetails/transactionDetails.wxss */
+.nav-img{
+  width: 100%;
+  height: 280rpx;
+}
+
+.list {
+  width: 690rpx;
+  height: 230rpx;
+  padding: 30rpx;
+  display: flex;
+  justify-content: conter;
+  flex-wrap: wrap;
+  border-bottom: 2rpx solid #EDECEC;
+}
+
+.list2 {
+  width: 690rpx;
+  height: 180rpx;
+  padding: 30rpx;
+  display: flex;
+  justify-content: conter;
+  flex-wrap: wrap;
+  border-bottom: 2rpx solid #EDECEC;
+}
+.list3 {
+  width: 690rpx;
+  height: 240rpx;
+  padding: 30rpx;
+  display: flex;
+  justify-content: conter;
+  flex-wrap: wrap;
+  border-bottom: 2rpx solid #EDECEC;
+}
+
+.box1{
+  font-weight: 600;
+  width: 690rpx;
+  height: 50rpx;
+}
+
+.box2{
+  width: 690rpx;
+  height: 40rpx;
+  font-size: 30rpx;
+  color: #6D6D6D;
+  line-height: 40rpx;
+}
+
+.box3{
+  width: 400rpx;
+  height: 40rpx;
+  font-size: 30rpx;
+  line-height: 40rpx;
+}
+.box3-1{
+  width: 160rpx;
+  height: 40rpx;
+  font-size: 30rpx;
+  line-height: 40rpx;
+}
+.box4{
+  width: 290rpx;
+  height: 40rpx;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  text-align: right;
+}
+.box4-1{
+  width: 530rpx;
+  height: 40rpx;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  white-space: nowrap;
+  display: flex;
+  justify-content: conter;
+  flex-wrap: nowrap;
+}
+.button{
+  width:690rpx; 
+  height: 90rpx;
+  background: #3FB8FA;
+  border-radius: 15rpx;
+  color: #FFFFFF;
+  font-size: 36rpx;
+  margin-top: 10rpx;
+}

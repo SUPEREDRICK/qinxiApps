@@ -1,0 +1,105 @@
+/* pages/editInfo/editInfo.wxss */
+
+.logo {
+  width: 70rpx;
+  height: 70rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10rpx;
+}
+
+.phoneNumber {
+  font-size: 30rpx;
+  margin-left: 30rpx;
+  float: left;
+  margin-top: 43rpx;
+}
+
+.phoneNumber text {
+  color: #38634f;
+  font-size: 30rpx;
+}
+
+.phoneNumInput {
+  width: 495rpx;
+  height: 45rpx;
+  border-bottom: 1rpx solid rgba(211, 208, 208, 0.596);
+  float:left;
+  margin-left: 20rpx;
+  margin-top: 22rpx;
+  font-size: 20rpx;
+}
+
+.intro {
+  color: rgba(211, 208, 208, 0.596);
+  font-size: 26rpx;
+  float: left;
+  margin-left: -126rpx;
+  margin-top: 5rpx;
+}
+
+.infomation {
+  width: 685rpx;
+  height: 45rpx;
+  /* background: red; */
+  float: left;
+  margin-left: 32rpx;
+  margin-top: 30rpx;
+  border-bottom: 1rpx solid rgba(211, 208, 208, 0.596);
+  font-size: 30rpx;
+}
+
+.field {
+  margin-left: 10rpx;
+  display: block;
+  float: left;
+}
+
+.star {
+  color: red;
+  display: block;
+  float: left;
+}
+
+.fileSet {
+  display: inline-block;
+}
+
+.selectSex {
+  width: 685rpx;
+  height: 45rpx;
+  /* background: red; */
+  float: left;
+  margin-left: 32rpx;
+  margin-top: 30rpx;
+  border-bottom: 1rpx solid rgba(211, 208, 208, 0.596);
+  font-size: 30rpx;
+}
+
+.submited {
+  width: 685rpx;
+  height: 70rpx;
+  background-color: black;
+  float: left;
+  margin-left: 32rpx;
+  margin-top: 30rpx;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 33rpx;
+}
+
+.announce {
+ width: 685rpx;
+ height: 70rpx; 
+ float: left;
+ margin-left: 32rpx;
+ margin-top: 5rpx;
+ /* display: flex;
+ justify-content: center;
+ align-items: center; */
+ text-align: center;
+ font-size: 25rpx;
+ color: rgba(211, 208, 208, 0.596);
+}

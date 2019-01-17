@@ -1,0 +1,174 @@
+/* pages/shop/shop.wxss */
+
+/*轮播图主要部分*/
+.swiper {
+  width: 100%;
+  height: 941rpx;
+}
+
+.swiper-image {
+  height: 100%;
+  width: 100%;
+}
+
+/* 轮播图迭代图片部分 */
+.slide-image{
+   height: 100%;
+   width: 100%;
+}
+
+/* 两个模块的总体布局 */
+.shop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25rpx;
+  width: 100%;
+  background-color: white;
+}
+
+/* 控制两个模块不换行 */
+.shopert {
+  display: inline-block;
+  border-right: 1rpx solid rgba(56, 99, 79, 0.3);
+}
+
+/*控制字体图标居中*/
+.shopin {
+  width: 300rpx;
+  height: 100rpx;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 个人商城小图标 */
+.shopin .shopimg {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+/*商城标题快*/
+.shopin .title {
+  display: inline-block;
+  margin-right: 20rpx;
+}
+
+/*商城标题主要*/
+.shopin .title-main {
+  font-size: 26rpx;
+}
+
+/* 个人商城标题次要 */
+.shopin .title-next {
+  font-size: 16rpx;
+}
+
+/* 区分两个入口区域与商品陈列模块的分界线 */
+.line {
+  width: 100%;
+  height: 10rpx;
+  background-color: rgb(237, 236, 232);
+}
+
+/*这里是商城商品的展示模块*/
+.section{ position: absolute; width: 100%; height: 100% ; overflow: hidden;}
+
+.left{ position: absolute; left: 0; top: 0; height: 100%; width: 90px; background: #F6F6F6; text-align: center;font-size:28rpx;}
+
+.left::before{ content: ""; position: absolute; background: #dcdcdc; right: 0; top: 0; height: 100%; border-right: 1rpx solid #dcdcdc;}
+
+.left view.active{ background: rgba(56, 99, 79, 0.8); position: relative; z-index: 2;}
+
+.left view{ display: block; height: 60px; line-height: 60px; border-bottom: 1px solid #dcdcdc;}
+
+.right{ margin-left: 90px; height: 100%; overflow: hidden; width: auto;background: #fff;}
+
+.right text{ font-size: 15px}
+
+/* 产品图片设定 */
+.prdpic {
+  width: 200rpx;
+  height: 200rpx;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  float: left;
+  border-radius: 5rpx;
+}
+
+/* 产品名称 */
+.prdname {
+  font-size: 35rpx;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+}
+
+/* 产品信息框 */
+.item {
+  margin-top: 10rpx;
+  width: 552rpx;
+  height: 230rpx;
+  /* background: red; */
+}
+
+/* 产品简述 */
+.prdsimdes {
+  font-size: 24rpx;
+  margin-left: 230rpx;
+  margin-top: 10rpx;
+  width: 255rpx;
+  height: 90rpx;
+  /* background: yellow; */
+  color: rgb(221, 221, 221);
+}
+
+/*商品价格*/
+.prdprice {
+  font-size: 32rpx;
+  color: #38634f;
+}
+
+/*点击进入商品详情页小图标*/
+.entrance {
+  width: 50rpx;
+  height: 50rpx;
+  float: right;
+  margin-top: 85rpx;
+}
+
+/* 横向滑动列表 */
+.scroll-x {
+    height:190rpx;
+    white-space:nowrap;
+    display:flex;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+.view-parent {
+    display:inline-block;
+}
+
+.view-item {
+    width:180rpx;
+    height:180rpx;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+    color:#222;
+    border:2rpx solid blue;
+    border-radius: 10rpx;
+    /* margin:10rpx; */
+    margin-top: 5rpx;
+    margin-left: 5rpx;
+}
+
+/* 二级列表 */

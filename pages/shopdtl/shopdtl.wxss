@@ -1,0 +1,83 @@
+/* pages/shopdtl/shopdtl.wxss */
+
+/*轮播图主要部分*/
+.swiper-image {
+  height: 100%;
+  width: 100%;
+}
+
+/* 轮播图迭代图片部分 */
+.slide-image{
+   height: 100%;
+   width: 100%;
+}
+
+/*产品标题、简述等信息方框设定*/
+.prdinfo {
+  width: 100%;
+  height: 240rpx;
+  background: red;
+}
+
+/* 产品名称 */
+.prdname {
+  margin-top: 10rpx;
+  float: left;
+  margin-left: 15rpx;
+  font-weight: bold;
+  color: #38634f;
+}
+
+/* 团购图设定 加油SUPEREED */
+.groupbuy {
+  width: 200rpx;
+  height: 36rpx;
+  margin-left: 15rpx;
+}
+
+/* 商品简要介绍信息 */
+.simdes {
+  width: 100%;
+  height: auto;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  margin-left: 15rpx;
+}
+
+/* 商品价格 */
+.prdprice {
+  font-size: 35rpx;
+  color: #f22f39;
+  margin-top: 10rpx;
+  margin-left: 15rpx;
+}
+
+/* 规则说明部分 */
+.reg {
+  width: 100%;
+  height: 150rpx;
+  background: #f3f8fa;
+}
+
+/* 规则区域标题 */
+.regtitle {
+  font-size: 33rpx;
+  margin-left: 15rpx;
+  margin-top: 10rpx;
+  font-weight: bold;
+  color: #29547f;
+}
+
+/* 单个规则选项的设定 */
+.regoption {
+  display: inline-block;
+  font-size: 22rpx;
+  color: #29547f;
+  margin-left: 30rpx;
+}
+
+/* 设定整行规则的左右位移间距 */
+.regline {
+  margin-left: 15rpx;
+}
+

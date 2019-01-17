@@ -1,0 +1,79 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/MyCoupon/MyCoupon",
+    "pages/shopdtl/shopdtl",
+    "pages/OrderStatus/OrderStatus",
+    "pages/transactionDetails/transactionDetails",
+    "pages/DeliveryOrder/DeliveryOrder",
+    "pages/myAuction/myAuction",
+    "pages/shopcart/shopcart",
+    "pages/auctionDtl/auctionDtl",
+    "pages/auction/auction",
+    "pages/collection/collection",
+    "pages/editInfo/editInfo",
+    "pages/shop/shop"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#38634f",
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "沁玺御翠府",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor": "#38634f",
+    "color": "#C9C9C9",
+    "selectedColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./pages/images/index.png",
+        "selectedIconPath": "./pages/images/indexing.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "商城",
+        "iconPath": "./pages/images/find.png",
+        "selectedIconPath": "./pages/images/finding.png"
+      },
+      {
+        "pagePath": "pages/auction/auction",
+        "text": "拍卖",
+        "iconPath": "./pages/images/auction.png",
+        "selectedIconPath": "./pages/images/auctioning.png"
+      }
+    
+    ],
+    "details":[
+      {
+        "pagePath": "pages/OrderStatus/OrderStatus",
+        "text": "拍卖"
+      },
+      {
+        "pagePath": "pages/store/store",
+        "text": "我去过的店"
+      },
+      {
+        "pagePath": "pages/Fans/Fans",
+        "text": "我的粉丝"
+      },
+      {
+        "pagePath": "pages/DeliveryOrder/DeliveryOrder",
+        "text": "配送订单"
+      },
+      {
+        "pagePath": "pages/transactionDetails/transactionDetails",
+        "text": "交易详情"
+      },
+      {
+        "pagePath": "pages/MyCoupon/MyCoupon",
+        "text": "我的优惠券"
+      },
+      {
+        "pagePath": "pages/personalstores/personalstores",
+        "text": "我的店铺"
+      }
+    ]
+  }
+}

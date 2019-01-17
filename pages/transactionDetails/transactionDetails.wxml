@@ -1,0 +1,48 @@
+<view>
+  <image src='http://i1.fuimg.com/650899/7f33f552acfdd1e2.png' class='nav-img'></image>
+  <view class='list'>
+    <view class='box1'>订单数据 2个</view>
+    <view class='box2' >2018/10/25 10:25</view>
+    <view class='box3'>{{orderdetail.prdName}}</view>
+    <view class='box4'>¥1200</view>
+    <!-- <view class='box2'>附属说明</view> -->
+    <!-- <view class='box3'>产品名称 X1</view>
+    <view class='box4'>¥1800</view> -->
+    <view class='box3'>数量</view>
+    <view class='box4'>{{orderdetail.prdAmount}}</view>
+    <!-- <view class='box2'>附属说明</view> -->
+  </view>
+  <view class='list2'>
+    <view class='box1'>合计</view>
+    <view class='box3'>商品金额</view>
+    <view class='box4'>¥3000</view>
+    <view class='box3'>优惠金额</view>
+    <view class='box4'>{{orderdetail.discountId}}</view>
+    <view class='box3'>配送费</view>
+    <view class='box4'>{{orderdetail.freight}}</view>
+  </view>
+  <view class='list3'>
+    <view class='box1'>配送信息</view>
+    <view class='box3-1'>订单状态</view>
+    <view class='box4-1'>{{orderdetail.orderType == 1 ? '已发货' : '待发货'}}</view>
+    <view class='box3-1'>订单号</view>
+    <view class='box4-1'>{{orderdetail.orderId}}</view>
+    <view class='box3-1'>联系人</view>
+    <view class='box4-1'>{{orderdetail.contactName}}</view>
+    <view class='box3-1'>手机号码</view>
+    <view class='box4-1'>{{orderdetail.phoneNum}}</view>
+    <view class='box3-1'>配送地址</view>
+    <scroll-view class='box4-1' scroll-x="true">
+      <view >{{orderdetail.sendAddr}}</view>
+    </scroll-view>
+    <view class='box3-1'>售后保单</view>
+    <view class='box4-1'>点击查看</view>
+  </view>
+  <!-- <button class='button'>评 价</button> -->
+
+
+
+
+
+
+</view>

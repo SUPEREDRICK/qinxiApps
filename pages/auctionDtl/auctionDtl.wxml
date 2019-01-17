@@ -1,0 +1,209 @@
+<!--pages/auctionDtl/auctionDtl.wxml-->
+<!-- 顶层轮播图 -->
+<swiper class='swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+  <block wx:for="{{imgUrls}}" class='swiper-image'>
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 中间显示拍卖当前拍卖价格和截至时间 -->
+<view class='boardcast'>
+  <text class='currentBid'>当前出价</text>
+  <text class='endingTime'>距离结束还有</text>
+</view>
+
+<!-- 分割线 -->
+<view class='cuttingLine'></view>
+
+<!-- 产品名称、出价额度、起步拍卖价 -->
+<view class='mainboard'>
+  <view class='prdname'>和田玉·青海料·镇宅龙龟</view>
+  <text class='addRange'>加价幅度</text>
+  <text class='startPrcie'>起拍价</text>
+  <view class='wechatGroup'>
+    <image src='http://i1.fuimg.com/650899/4eb74a4704379673.png' class='wechaticon'></image>
+    <text class='groupchat'>玉友交流群</text>
+  </view>
+  <view class='rangeNprice'>
+    <text>￥200.00</text>
+    <text class='startPrice'>￥0.00</text>
+  </view>
+</view>
+
+<!-- 分割线 -->
+<view class='cuttingLine'></view>
+
+<!-- 拍卖出价列表标题 -->
+<view class='listPrice'>
+  <text class='listTitle'>出价211次</text>
+</view>
+
+<!-- 列表项目 6 items -->
+<view class='list-item'>
+  <view class='state'>领先</view>
+  <image src='http://i1.fuimg.com/650899/26511135c4a7154a.png' class='itemImg'></image>
+  <view class='whoNprice'>
+    <view class='who'>龙井茶-王晓松</view>
+    <view class='aucPrice'>出价￥252.00</view>
+  </view>
+  <view class='acDate'>2019-01-12 16:35:53</view>
+</view>
+
+<view class='list-item'>
+  <view class='state'>领先</view>
+  <image src='http://i1.fuimg.com/650899/26511135c4a7154a.png' class='itemImg'></image>
+  <view class='whoNprice'>
+    <view class='who'>龙井茶-王晓松</view>
+    <view class='aucPrice'>出价￥252.00</view>
+  </view>
+  <view class='acDate'>2019-01-12 16:35:53</view>
+</view>
+
+<view class='list-item'>
+  <view class='state'>领先</view>
+  <image src='http://i1.fuimg.com/650899/26511135c4a7154a.png' class='itemImg'></image>
+  <view class='whoNprice'>
+    <view class='who'>龙井茶-王晓松</view>
+    <view class='aucPrice'>出价￥252.00</view>
+  </view>
+  <view class='acDate'>2019-01-12 16:35:53</view>
+</view>
+
+<view class='list-item'>
+  <view class='state'>领先</view>
+  <image src='http://i1.fuimg.com/650899/26511135c4a7154a.png' class='itemImg'></image>
+  <view class='whoNprice'>
+    <view class='who'>龙井茶-王晓松</view>
+    <view class='aucPrice'>出价￥252.00</view>
+  </view>
+  <view class='acDate'>2019-01-12 16:35:53</view>
+</view>
+
+<view class='list-item'>
+  <view class='state'>领先</view>
+  <image src='http://i1.fuimg.com/650899/26511135c4a7154a.png' class='itemImg'></image>
+  <view class='whoNprice'>
+    <view class='who'>龙井茶-王晓松</view>
+    <view class='aucPrice'>出价￥252.00</view>
+  </view>
+  <view class='acDate'>2019-01-12 16:35:53</view>
+</view>
+
+<view class='list-item'>
+  <view class='state'>领先</view>
+  <image src='http://i1.fuimg.com/650899/26511135c4a7154a.png' class='itemImg'></image>
+  <view class='whoNprice'>
+    <view class='who'>龙井茶-王晓松</view>
+    <view class='aucPrice'>出价￥252.00</view>
+  </view>
+  <view class='acDate'>2019-01-12 16:35:53</view>
+</view>
+
+<!-- 查看更多 for more items -->
+<view class='forMore'>查看更多</view>
+
+<!-- 分割线 -->
+<view class='cuttingLine'></view>
+
+<!-- 商品参数 -->
+<view class='shopParam'>
+  <view class='shopParamTitle'>商品参数</view>
+  <view class='paramBox'>
+    <text class='paramLeft'>尺寸</text>
+    <text class='paramRight'>49.8*33.8*9.7</text>
+  </view>
+  <view class='paramBox'>
+    <text class='paramLeft'>重量</text>
+    <text class='paramRight'>40.9g</text>
+   </view>
+  <view class='paramBox'>
+    <text class='paramLeft'>颜色</text>
+    <text class='paramRight'>糖白</text>
+  </view>
+  <view class='paramBox'>
+    <text class='paramLeft'>上架时间</text>
+    <text class='paramRight'>2019-01-01</text>
+  </view>
+</view>
+
+<!-- 商品认证图标 -->
+<view class='authentication'>
+  <view class='distance'>
+    <image src='http://i1.fuimg.com/650899/6268dce72974bb5f.png' class='authImg'></image>
+    <text class='authTitle'>三日包换</text>
+  </view>
+
+  <view class='distance'>
+  <image src='http://i1.fuimg.com/650899/3d43faa4bf25aed9.png' class='authImg'></image>
+  <text class='authTitle'>承诺保真</text>
+  </view>
+
+  <view class='distance'>
+    <image src='http://i1.fuimg.com/650899/20ea8a837c2e394c.png' class='authImg'></image>
+    <text class='authTitle'>顺丰包邮</text>
+  </view>
+  <view class='distance'>
+    <image src='http://i1.fuimg.com/650899/ad1df8920a227ec3.png' class='authImg'></image>
+    <text class='authTitle'>鉴定证书</text>
+  </view>
+</view>
+
+<!-- 分割线 -->
+<view class='cuttingLine'></view>
+
+<!-- 产品介绍 -->
+<view class='prdintro'>拍品介绍</view>
+<view class='textContent'>古往今来，翡翠得到了无数女人的宠爱。从大量的报道中，我们看到，宋美龄就是20世纪引领翡翠时尚的先驱，她一生收藏了不少翡翠，其中最为出名的是其常佩戴的翡翠麻花手镯。</view>
+
+<!-- 产品图片展示 -->
+<view class='imgboxs'>
+  <image src='http://i1.fuimg.com/650899/6b1d5907dab8018b.jpg'></image>
+  <image src='http://i1.fuimg.com/650899/6b1d5907dab8018b.jpg'></image>
+  <image src='http://i1.fuimg.com/650899/6b1d5907dab8018b.jpg'></image>
+  <image src='http://i1.fuimg.com/650899/6b1d5907dab8018b.jpg'></image>
+</view>
+
+<!-- 分割线 -->
+<view class='cuttingLine'></view>
+
+<!-- 即将拍卖板块 -->
+<view class='willAuctionsTitle'>即将拍卖的作品</view>
+<!-- 即将拍卖横向滑动列表 -->
+<scroll-view scroll-x='true' class="scroll-x">
+        <view wx:for="{{willAuctions}}" wx:key="{{index}}" class="view-parent">
+          <view class="view-item" data-id="{{item.prdtype}}" bindtap='toprdlist'>
+            <image src='http://i1.fuimg.com/650899/32db51d22a2d65f5.jpg' class='willAuctionImg'></image>
+            <view class='willtitle'>糯种飘绿坐莲观音翡翠吊坠</view>
+            <view class='willtime'>2019-01-01 13:00:01 开拍</view>
+          </view>
+        </view>
+</scroll-view>
+
+<!-- 分割线 -->
+<view class='cuttingLine'></view>
+
+<!-- 底部导航栏 -->
+<view class='bottonNav'>
+  <view class='toIndex'>
+    <image src='http://i1.fuimg.com/650899/67b6a62e9d3affcc.png' class='toIndexImg'></image>
+    <view class='toIndexTitle'>首页</view>
+  </view>
+
+  <view class='toIndex'>
+    <image src='http://i1.fuimg.com/650899/67b6a62e9d3affcc.png' class='toIndexImg'></image>
+    <view class='toIndexTitle'>分享</view>
+  </view>
+
+  <view class='toIndex'>
+    <image src='http://i1.fuimg.com/650899/67b6a62e9d3affcc.png' class='toIndexImg'></image>
+    <view class='toIndexTitle'>收藏</view>
+  </view>
+
+  <!-- 参与拍卖 -->
+  <view class='joinAu'>我要参拍</view>
+  <view class='payAuthbox'>
+    <view>交保证金</view>
+    <view>￥50.00</view>
+  </view>
+</view>

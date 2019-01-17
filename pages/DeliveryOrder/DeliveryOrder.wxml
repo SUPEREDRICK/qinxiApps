@@ -1,0 +1,9 @@
+<view wx:for="{{briefOrder}}" wx:for-item="data">
+  <view class='pocr' data-id="{{data.orderId}}" bindtap='todetail'>
+    <view class='box1'>{{data.prdName}}</view>
+    <view class='box2'>{{data.orderState}}</view>
+    <view class='box3'></view>
+    <view class='box4'>{{data.orderWay}}</view>
+    <view class='box4'>{{data.orderDate}}</view>
+  </view>
+</view>

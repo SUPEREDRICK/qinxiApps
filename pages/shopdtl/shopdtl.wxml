@@ -1,0 +1,29 @@
+<!--pages/shopdtl/shopdtl.wxml-->
+  <!-- 顶层轮播图 -->
+   <swiper class='swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{imgUrls}}" class='swiper-image'>
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 商品标题、商品简介、商品价格、打折信息... -->
+  <view class='prdinfo'>
+    <view class='prdname'>超值团|金奖和田翡翠(新) 5组合装</view>
+    <image src='http://i1.fuimg.com/650899/32618dc50969dbe2.png' class='groupbuy'></image>
+    <view class='simdes'>存入收藏库，有效期360天，单个即可下单，免费包邮滴</view>
+    <view class='prdprice'>￥799.99</view>
+  </view>
+
+  <view class='reg'>
+    <view class='regtitle'>☯拼团玩法</view>
+    <view class='regline'>
+      <view class='regoption'>❶选择商品、开团或者拼团</view>
+      <view class='regoption'>❷付款后邀请好友参团</view>
+    </view>
+    <view class='regline'>
+      <view class='regoption'>❸达到拼团人数，顺利拼团</view>
+      <view class='regoption'>❹若2小时内拼团不成功，全额退款</view>
+    </view>
+  </view>
