@@ -2,7 +2,8 @@
   <image src='http://i1.fuimg.com/650899/7f42bfde6cb6e992.png' class='nav-img' bindtap='test'></image>
   <view class='list'>
     <view class='name' bindtap='editData'>
-      <view>{{username}}</view>
+      <button open-type='getUserInfo' lang="zh_CN" bindgetuserinfo="onGotUserInfo" class='auth' wx:if="{{userunlogined}}">{{username}}</button>
+      <button open-type='getUserInfo' lang="zh_CN" bindgetuserinfo="onGotUserInfo" class='auth' wx:if="{{userlogined}}">{{username}}</button>
       <image src='http://i1.fuimg.com/650899/cc48c4e96fb39538.png' class='img'></image>
     </view>
     <view >
@@ -23,35 +24,16 @@
       </view>
     </view>
   </view>
-  <view class='list2'>
-    <view class='project' bindtap='toOrderList'>
-      <image src='http://i1.fuimg.com/650899/124c8815f2359c20.png' class='project-img'></image>
-      <view class='box'>我的交易</view>
-      <view class='line'></view>
-    </view>
-    <view class='project' bindtap='toMyAuction'>
-      <image src='http://i1.fuimg.com/650899/0035620fd0d31e75.png' class='project-img'></image>
-      <view class='box'>我的拍卖</view>
-      <view class='line'></view>
-    </view>
-    <view class='project' bindtap='toMyCoupon'>
-      <image src='http://i1.fuimg.com/650899/1157dd01ba5b6461.png' class='project-img'></image>
-      <view class='box'>我的代金券</view>
-    </view>
-    <view class='line2'></view>
-    <view class='project'>
-      <image src='http://i1.fuimg.com/650899/77b22442fd6101c5.png' class='project-img'></image>
-      <view class='box'>口袋御翠府</view>
-      <view class='line'></view>
-    </view>
-    <view class='project'>
-      <image src='http://i1.fuimg.com/650899/e293cfe68d8a5bfd.png' class='project-img'></image>
-      <view class='box'>购物车</view>
-      <view class='line'></view>
-    </view>
-    <view class='project' bindtap='toMyCollection'>
-      <image src='http://i1.fuimg.com/650899/47ae96f371038217.png' class='project-img'></image>
-      <view class='box'>我的收藏</view>
+
+  <!-- 菜单 -->
+  <view class='list2' >
+     <view class='project' wx:for="{{indexMenu}}" bindtap='{{item.url}}'>
+        <image src='{{item.picaddr}}' class='project-img'></image>
+        <view class='box'>{{item.menuname}}</view>
+        <view class='line'></view>
     </view>
   </view>
+    <!-- <open-data type="userAvatarUrl"></open-data>    
+    <open-data type="userNickName" lang="zh_CN"></open-data>
+    <button open-type='getUserInfo' lang="zh_CN" bindgetuserinfo="onGotUserInfo">授权登陆</button> -->
 </view>

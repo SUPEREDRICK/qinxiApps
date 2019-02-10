@@ -36,7 +36,9 @@
   <!-- 横向滑动列表 -->
   <scroll-view scroll-x='true' class="scroll-x">
         <view wx:for="{{typelist}}" wx:key="{{index}}" class="view-parent">
-          <view class="view-item" data-id="{{item.prdtype}}" bindtap='toprdlist'>{{item.prdtype}} </view>
+          <view class="view-item" data-id="{{item.prdtype}}" bindtap='toprdlist'>
+            <image src='{{item.addr}}'></image>
+          </view>
         </view>
    </scroll-view>
 
@@ -50,26 +52,26 @@
         {{item.prdname}}{{index}}
       </view> -->
 
-      <view wx:for="{{secondTypes}}" :key="{{index}}" data-id="{{item.id}}" bindtap="showList" class="{{item.type == true ? 'active' : ''}}" style="font-size:33rpx" wx:if='{{item.style == true ? true : false}}'>
-        <view>{{item.prdname}}{{index}}</view>
+      <view wx:for="{{firstMenu}}" :key="{{index}}" data-id="{{item.typeid}}" bindtap="showList" class="{{item.type == true ? 'active' : ''}}" style="font-size:33rpx" wx:if='{{item.style == true ? true : false}}'>
+        <view>{{item.typename}}</view>
       </view>
 
-       <view wx:for="{{threeTypes}}" :key="{{index}}" style="font-size:33rpx" wx:if='{{secondMenuStyle}}'>
-        <view>{{item.prdname}}{{index}}</view>
+       <view wx:for="{{secondMenu}}" :key="{{index}}" data-prdid="{{item.prdid}}" style="font-size:33rpx" wx:if='{{secondMenuStyle}}' class="{{item.type == true ? 'secondActive' : ''}}" bindtap='secondHandel'>
+        <view>{{item.size}}</view>
       </view>
     </scroll-view>
     
     <!-- 右侧数据 -->
     <scroll-view scroll-y="true" class="right">
     <view class="options">
-      <view class="option" wx:for="{{types}}" wx:for-item="data">
+      <view class="option" wx:for="{{thirdMenu}}" wx:for-item="data" data-id="{{data.prdid}}" bindtap='threeMenuHandel'>
           <!-- 此处是商品选项单元格及商品信息陈列，点击进去获取id传递到跳转的详情页面中 -->
-          <navigator url="/pages/shopdtl/shopdtl?id={{data.id}}" wx:key="typeId" class="item">
+          <navigator url="/pages/shopdtl/shopdtl?id={{data.prdid}}" wx:key="typeId" class="item">
             <image src='http://i1.fuimg.com/650899/c75d6c234213cc5a.png' class='entrance'></image>
-            <image src="http://i1.fuimg.com/650899/0ba0dc4561e9d5f9.png" bindtap='test' class='prdpic'></image>
+            <image src="http://i1.fuimg.com/650899/0ba0dc4561e9d5f9.png" class='prdpic'></image>
             <view class='prdname'>{{data.prdname}}</view>
-            <view class='prdsimdes'>{{data.prdsimdes}}</view>
-            <view class='prdprice'>{{data.prdprice}}</view>
+            <view class='prdsimdes'>{{data.prddes}}</view>
+            <view class='prdprice'>￥{{data.price}}</view>
           </navigator>
       </view>
     </view>

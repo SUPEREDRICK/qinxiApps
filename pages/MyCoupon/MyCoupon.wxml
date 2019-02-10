@@ -2,114 +2,53 @@
   <view class='list'>
     <view class='Triangle-left' ></view>
       <swiper class='Swiper' indicator-dots="true" indicator-active-color="#FEC322" >
-        <swiper-item class="Swiper-inem" >
+       <swiper-item class="Swiper-inem" wx:for="{{coupon}}" wx:if="{{item.coupontypeid == 'ctype1' ? true : false}}">
         <view class='yuan'></view>
           <view class='box'>
-            <view class='text'>优惠券名称</view>
-            <view class='text2'>- ￥200</view>
-            <image src='http://i1.fuimg.com/650899/b4479fda23da86bc.png' class='img'></image>
-            <view class='text3'> 查看详情</view>
+            <view class='text'>{{item.couponname}}</view>
+            <view class='text2'>- ￥{{item.cost}}</view>
+            <image src='http://i2.tiimg.com/650899/9fa78a7159fc90a3.png' class='img'></image>
+            <view class='text3' bindtap='toCouponDtl'> 查看详情</view>
             <view class='text4'>立即兑换</view>
           </view>
-        </swiper-item>
-        <swiper-item>
-          <view class='yuan'></view>
-          <view class='box2'>
-            <view class='text'>优惠券名称</view>
-            <view class='text2'>- ￥150</view>
-            <image src='http://i1.fuimg.com/650899/b4479fda23da86bc.png' class='img'></image>
-            <view class='text3'> 查看详情</view>
-            <view class='text4'>立即兑换</view>
-          </view>
-        </swiper-item>
-        <swiper-item>
-          <view class='yuan'></view>
-            <view class='box3'>
-              <view class='text'>优惠券名称</view>
-              <view class='text2'>- ￥100</view>
-              <image src='http://i1.fuimg.com/650899/b4479fda23da86bc.png' class='img'></image>
-              <view class='text3'> 查看详情</view>
-              <view class='text4'>立即兑换</view>
-            </view>
         </swiper-item>
       </swiper>
     <view class='Triangle-right'></view>
   </view>
 
-<view class='list'>
-    <view class='Triangle-left'></view>
-      <swiper class='Swiper' indicator-dots="true" indicator-active-color="#FEC322">
-        <swiper-item class="Swiper-inem" >
+  <!-- 第二部分 -->
+  <view class='list'>
+    <view class='Triangle-left' ></view>
+      <swiper class='Swiper' indicator-dots="true" indicator-active-color="#FEC322" >
+       <swiper-item class="Swiper-inem" wx:for="{{coupon}}" wx:if="{{item.coupontypeid == 'ctype2' ? true : false}}">
         <view class='yuan'></view>
           <view class='box'>
-            <view class='text'>优惠券名称</view>
-            <view class='text2'>- ￥200</view>
-            <image src='http://i1.fuimg.com/650899/b4479fda23da86bc.png' class='img'></image>
-            <view class='text3'> 查看详情</view>
+            <view class='text'>{{item.couponname}}</view>
+            <view class='text2'>- ￥{{item.cost}}</view>
+            <image src='http://i2.tiimg.com/650899/9fa78a7159fc90a3.png' class='img'></image>
+            <view class='text3' bindtap='toCouponDtl'> 查看详情</view>
             <view class='text4'>立即兑换</view>
           </view>
-        </swiper-item>
-        <swiper-item>
-          <view class='yuan'></view>
-          <view class='box2'>
-            <view class='text'>优惠券名称</view>
-            <view class='text2'>- ￥150</view>
-            <image src='http://i1.fuimg.com/650899/b4479fda23da86bc.png' class='img'></image>
-            <view class='text3'> 查看详情</view>
-            <view class='text4'>立即兑换</view>
-          </view>
-        </swiper-item>
-        <swiper-item>
-          <view class='yuan'></view>
-            <view class='box3'>
-              <view class='text'>优惠券名称</view>
-              <view class='text2'>- ￥100</view>
-              <image src='http://i1.fuimg.com/650899/b4479fda23da86bc.png' class='img'></image>
-              <view class='text3'> 查看详情</view>
-              <view class='text4'>立即兑换</view>
-            </view>
         </swiper-item>
       </swiper>
     <view class='Triangle-right'></view>
   </view>
 
-<view class='list'>
-    <view class='Triangle-left'></view>
-      <swiper class='Swiper' indicator-dots="true" indicator-active-color="#FEC322">
-        <swiper-item class="Swiper-inem" >
+  <!-- 第三部分 -->
+   <view class='list'>
+    <view class='Triangle-left' ></view>
+      <swiper class='Swiper' indicator-dots="true" indicator-active-color="#FEC322" >
+       <swiper-item class="Swiper-inem" wx:for="{{coupon}}" wx:if="{{item.coupontypeid == 'ctype3' ? true : false}}">
         <view class='yuan'></view>
           <view class='box'>
-            <view class='text'>优惠券名称</view>
-            <view class='text2'>- ￥200</view>
-            <image src='http://i1.fuimg.com/650899/b4479fda23da86bc.png' class='img'></image>
-            <view class='text3'> 查看详情</view>
+            <view class='text'>{{item.couponname}}</view>
+            <view class='text2'>- ￥{{item.cost}}</view>
+            <image src='http://i2.tiimg.com/650899/9fa78a7159fc90a3.png' class='img'></image>
+            <view class='text3' bindtap='toCouponDtl'> 查看详情</view>
             <view class='text4'>立即兑换</view>
           </view>
-        </swiper-item>
-        <swiper-item>
-          <view class='yuan'></view>
-          <view class='box2'>
-            <view class='text'>优惠券名称</view>
-            <view class='text2'>- ￥150</view>
-            <image src='http://i1.fuimg.com/650899/b4479fda23da86bc.png' class='img'></image>
-            <view class='text3'> 查看详情</view>
-            <view class='text4'>立即兑换</view>
-          </view>
-        </swiper-item>
-        <swiper-item>
-          <view class='yuan'></view>
-            <view class='box3'>
-              <view class='text'>优惠券名称</view>
-              <view class='text2'>- ￥100</view>
-              <image src='http://i1.fuimg.com/650899/b4479fda23da86bc.png' class='img'></image>
-              <view class='text3'> 查看详情</view>
-              <view class='text4'>立即兑换</view>
-            </view>
         </swiper-item>
       </swiper>
     <view class='Triangle-right'></view>
   </view>
-
-
-
 </view>

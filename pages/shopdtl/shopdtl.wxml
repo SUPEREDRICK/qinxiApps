@@ -10,10 +10,10 @@
 
   <!-- 商品标题、商品简介、商品价格、打折信息... -->
   <view class='prdinfo'>
-    <view class='prdname'>超值团|金奖和田翡翠(新) 5组合装</view>
+    <view class='prdname'>{{prdname}}</view>
     <image src='http://i1.fuimg.com/650899/32618dc50969dbe2.png' class='groupbuy'></image>
-    <view class='simdes'>存入收藏库，有效期360天，单个即可下单，免费包邮滴</view>
-    <view class='prdprice'>￥799.99</view>
+    <view class='simdes'>{{prddes}}</view>
+    <view class='prdprice'>￥{{price}}</view>
   </view>
 
   <view class='reg'>

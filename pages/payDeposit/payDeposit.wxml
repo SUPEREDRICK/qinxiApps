@@ -1,0 +1,3 @@
+<!--pages/payDeposit/payDeposit.wxml-->
+<view class='paybutton' bindtap='topay'>支付保证金</view>
+<view class='txt'></view>

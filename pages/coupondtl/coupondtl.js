@@ -1,38 +1,18 @@
-// pages/transactionDetails/transactionDetails.js
+// pages/coupondtl/coupondtl.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    orderdetail:[]
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this
-    var prdid = JSON.parse(options.prdid);
-    console.log('往后台查询' + prdid);
-    wx.request({
-      method:'post',
-      dataType:'text',
-      url: 'http://www.yucuifu.com/tomcat/supered/orderdetail',
-      data:{
-        prdid:prdid
-      },
-      header: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-      success: function (res) {
-        var data = JSON.parse(res.data);
-        that.setData({
-          orderdetail: data[0]
-        });
-        
-      }
-    })
+    
   },
 
   /**
@@ -74,7 +54,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    
   },
 
   /**
@@ -82,5 +62,14 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  /* 用户点击兑换 */
+  toexchange:function() {
+    wx.showToast({
+      title: '兑换成功',
+      icon: 'success',
+      duration: 2000
+    })
   }
 })

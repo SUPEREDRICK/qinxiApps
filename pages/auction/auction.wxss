@@ -25,7 +25,7 @@
     white-space:nowrap;
     /* display:flex; */
     /* text-align: center; */
-    background: yellow;
+    /* background: yellow; */
 }
 
 /* .view-parent {
@@ -43,7 +43,7 @@
     justify-content:center; */
     display: inline-block;
     float: left;
-    border:2rpx solid blue;
+    background-color: rgb(241, 235, 235);
     border-radius: 10rpx;
     margin: 10rpx 2rpx 2rpx 10rpx;
 }
@@ -55,18 +55,20 @@
 }
 
 .auprdname {
-  font-size: 33rpx;
+  font-size: 28rpx;
+  margin-left: 10rpx;
 }
 
 .auprdprice {
   font-size: 30rpx;
   display: inline-block;
+  margin-left: 10rpx;
 }
 
 .hot {
   display: inline-block;
   font-size: 30rpx;
-  margin-left: 200rpx;
+  margin-left: 217rpx;
 }
 
 .hotimg {

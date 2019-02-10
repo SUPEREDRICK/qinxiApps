@@ -13,14 +13,44 @@ Page({
     interval: 2000,       //自动切换时间间隔
     duration: 1000,       //滑动动画时长
     inputShowed: false,
-    inputVal: ""
+    inputVal: "",
+
+    prdid:'',
+    prdname:'',
+    size:0,
+    prddes:'',
+    price:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+    var prdid = options.id;
+    // var prdid = JSON.parse(options.id);
+    wx.request({
+      method: 'post',
+      dataType: 'text',
+      url: 'http://www.yucuifu.com/tomcat/supered/qryPrdDtl',
+      data: {
+        prdid: prdid
+      },
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      success: function (res) {
+        var data = JSON.parse(res.data)[0];
+        console.log('我在这里:' + data);
+        that.setData({
+          prdid: data.prdid,
+          prdname: data.prdname,
+          size: data.size,
+          prddes: data.prddes,
+          price: data.price
+        });
+      }
+    })
   },
 
   /**

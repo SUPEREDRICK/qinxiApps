@@ -115,12 +115,14 @@
 }
 
 /* 设置加价幅度和起拍价的文字 */
-.rangeNprice text {
+.rangeNprice .rangePrice {
   font-size: 40rpx;
+  margin-left: 10rpx;
 }
 
 .startPrice {
-  margin-left: 79rpx;
+  margin-left: 174rpx;
+  font-size: 40rpx;
   color: white;
 }
 

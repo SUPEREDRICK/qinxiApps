@@ -6,10 +6,10 @@ Page({
    */
   data: {
     imgUrls: [
-      "http://i1.fuimg.com/650899/1bbbc93070dc7b9e.png",
-      "http://i1.fuimg.com/650899/fc048a986c8358ee.png",
-      "http://i1.fuimg.com/650899/be285a3ac5e93f81.png",
-      "http://i1.fuimg.com/650899/938f55adb95091ba.png"
+      "http://i2.tiimg.com/650899/220aefff6d9a8e42.png",
+      "http://i2.tiimg.com/650899/d752aa6f204455df.png",
+      "http://i2.tiimg.com/650899/a3b2141c4f91c7a4.jpg",
+      "http://i2.tiimg.com/650899/257ee7b652a9cb21.png"
     ],
     indicatorDots: true,  //是否显示面板指示点
     autoplay: true,      //是否自动切换
@@ -17,146 +17,138 @@ Page({
     duration: 1000,       //滑动动画时长
     inputShowed: false,
     inputVal: "",
-
-    //设置商城列表测试数据
-    types:[
-      {
-        id:'index1',
-        prdname:'我的',
-        prdsimdes:'我的数据',
-        prdprice:18.8,
-        type:false
-      },
-      {
-        id: 'index2',
-        prdname: '信息',
-        prdsimdes: '我的最爱一生中最爱的你',
-        prdprice: 18.9,
-        type: false
-      },
-      {
-        id: 'index3',
-        prdname: '数据',
-        prdsimdes: '我的爱人',
-        prdprice: 18.8,
-        type: false
-      },
-      {
-        id: 'index4',
-        prdname: '丽霞',
-        prdsimdes: '我的老婆',
-        prdprice: 18.9,
-        type: false
-      },
-      {
-        id: 'index5',
-        prdname: '丽霞',
-        prdsimdes: '我的老婆',
-        prdprice: 18.9,
-        type: false
-      },
-      {
-        id: 'index6',
-        prdname: '丽霞',
-        prdsimdes: '我的老婆',
-        prdprice: 18.9,
-        type: false
-      }
-    ],
     typelist: [
       {
-        prdtype:'name'
+        prdtype:'name',
+        addr:'http://i2.tiimg.com/650899/423eac85f97205df.png'
       },
       {
-        prdtype: 'name'
+        prdtype: 'name',
+        addr: 'http://i1.fuimg.com/650899/6310d42c9861d9c7.png'
       },
       {
-        prdtype: 'name'
+        prdtype: 'name',
+        addr: 'http://i2.tiimg.com/650899/cfecce00a95b5540.png'
       },
       {
-        prdtype: 'name'
+        prdtype: 'name',
+        addr: 'http://i2.tiimg.com/650899/86f3f1e5e183a296.jpg'
       },
       {
-        prdtype: 'name'
-      }
-    ],
-    secondTypes: [
-      {
-        id: 'index1',
-        prdname: '我的',
-        prdsimdes: '我的数据',
-        prdprice: 18.8,
-        type: false,
-        style:true
-      },
-      {
-        id: 'index2',
-        prdname: '信息',
-        prdsimdes: '我的最爱一生中最爱的你',
-        prdprice: 18.9,
-        type: false,
-        style: true
-      },
-      {
-        id: 'index3',
-        prdname: '数据',
-        prdsimdes: '我的爱人',
-        prdprice: 18.8,
-        type: false,
-        style: true
-      },
-      {
-        id: 'index4',
-        prdname: '丽霞',
-        prdsimdes: '我的老婆',
-        prdprice: 18.9,
-        type: false,
-        style: true
-      },
-      {
-        id: 'index5',
-        prdname: '丽霞',
-        prdsimdes: '我的老婆',
-        prdprice: 18.9,
-        type: false,
-        style: true
-      },
-      {
-        id: 'index6',
-        prdname: '丽霞',
-        prdsimdes: '我的老婆',
-        prdprice: 18.9,
-        type: false,
-        style: true
+        prdtype: 'name',
+        addr: 'http://i2.tiimg.com/650899/44cded64ed9d4d29.png'
       }
     ],
     count: 0,
     secondMenuStyle: false,
     threeTypes:[
       {
-        prdname:'lixia'
+        id:'index1',
+        prdname:'lixia',
+        type:false
       },
       {
-        prdname: 'lixia'
+        id:'index2',
+        prdname: 'lixia',
+        type: false
       },
       {
-        prdname: 'lixia'
+        id:'index3',
+        prdname: 'lixia',
+        type: false
       }
-    ]
+    ],
+    firstMenu:[],
+    secondMenuAll:[],
+    secondMenu:[],
+    thirdMenu:[]
   },
   
   /**
-   * 生命周期函数--监听页面加载
+   * 生命周期函数--监听页面加载-加载1.加载Banner 2.加载横向活动模块 3.一二级菜单数据-产品类型+次产品类型
    */
   onLoad: function (options) {
-    console.log('在页面加载中执行的,,,,');
+    var that = this
+
+    /* 加载横向滑动模块 */
+    
+
+    /* 3.一级菜单数据-产品类型 */
+    wx.request({
+      url: 'http://www.yucuifu.com/tomcat/supered/qryPrdType',
+      method:'get',
+      dataType:'text',
+      success:function(res) {
+        const prdTypes = JSON.parse(res.data);
+        var index = 0;
+        const firstMenu = [];
+        prdTypes.forEach(function() {
+          firstMenu.push({
+            typeid: prdTypes[index].typeid,
+            typename: prdTypes[index].typename,
+            // size:prdTypes[index].size,
+            // prddes: prdTypes[index].prddes,
+            // prdname: prdTypes[index].prdname,
+            // price: prdTypes[index].price,
+            type: false,
+            style: true
+          });
+          index++;
+        });
+
+        that.setData({
+          firstMenu: firstMenu
+        })
+      },
+      fail:function(res) {
+
+      },
+      complete:function(res) {
+
+      }
+    });
+
+    /* 加载二级菜单 */
+    wx.request({
+      url: 'http://www.yucuifu.com/tomcat/supered/qrySecondMenu',
+      method: 'get',
+      dataType: 'text',
+      success:function(res) {
+        var data = JSON.parse(res.data);
+        var index = 0;
+        var secondMenuAll = [];
+        data.forEach(function() {
+          secondMenuAll.push({
+            typeid:data[index].typeid,
+            typename: data[index].typename,
+            prdid: data[index].prdid,
+            prdname: data[index].prdname,
+            size: data[index].size,
+            picaddr: data[index].picaddr,
+            prddes: data[index].prddes,
+            price: data[index].price,
+            type: false
+          });
+          index++;
+        }); 
+        that.setData({
+          secondMenuAll: secondMenuAll
+        });
+      },
+      fail:function(res) {
+        
+      },
+      complete: function (res) {
+
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log("data...");
+    
   },
 
   /**
@@ -222,12 +214,11 @@ Page({
   },
 
   /**
-   * 设置二级菜单
+   * 
    */
-  showList: function (event) {
+  showList_bak: function (event) {
     var that = this
-    var objid = event.currentTarget.dataset.id;
-    console.log(objid);
+    var typeid = event.currentTarget.dataset.id;
     const taps = that.data.types;
     var count = that.data.count;
     var secondMenuStyle = that.data.secondMenuStyle;
@@ -267,5 +258,115 @@ Page({
       count:count,
       secondMenuStyle: secondMenuStyle
     });
+  },
+
+  /* 一级菜单点击绑定 */
+  showList:function(event) {
+    var that = this
+    var id = event.currentTarget.dataset.id;
+    console.log(id);
+    var firstMenu = that.data.firstMenu;
+    var count = that.data.count;
+    var secondMenuStyle = that.data.secondMenuStyle;
+    if(count % 2 == 0) {
+      var index = 0;
+      firstMenu.forEach(function () {
+        if (id == firstMenu[index].typeid) {
+          firstMenu[index].type = true;
+          firstMenu[index].style = true;
+        } else {
+          firstMenu[index].type = false;
+          firstMenu[index].style = false;
+        }
+        index++;
+      });
+      secondMenuStyle = true;
+    } else {
+      var index = 0;
+      firstMenu.forEach(function () {
+        if (id == firstMenu[index].typeid) {
+          firstMenu[index].type = true;
+          firstMenu[index].style = true;
+        } else {
+          firstMenu[index].type = false;
+          firstMenu[index].style = true;
+        }
+        index++;
+      });
+      secondMenuStyle = false;
+    }
+    count++;
+    that.setData({
+      firstMenu: firstMenu,
+      count: count,
+      secondMenuStyle: secondMenuStyle
+    });
+
+    //二级菜单数据展示问题
+    var data = that.data.secondMenuAll;
+    console.log('------*****' + data);
+    var index = 0;
+    const secondMenu = [];
+    data.forEach(function() {
+      if (id == data[index].typeid) {
+        secondMenu.push({
+          prdid: data[index].prdid,
+          size: data[index].size,
+          type: data[index].type
+        });
+      }
+      index++;
+    });
+
+    that.setData({
+      secondMenu: secondMenu
+    });
+  },
+
+  /* 二级菜单点击事件 */
+  secondHandel:function(event) {
+    var that = this
+    var prdid = event.currentTarget.dataset.prdid;
+    var data = that.data.secondMenu;
+    var index = 0;
+    //样式控制:用户点击选中某个选项并标记出来...
+    data.forEach(function() {
+      if (prdid == data[index].prdid) {
+        data[index].type = true;
+      } else {
+        data[index].type = false;
+      }
+      index++;
+    });
+
+    that.setData({
+      secondMenu: data
+    });
+
+    //展示对应的产品数据
+    index = 0;
+    data = that.data.secondMenuAll;
+    const thirdMenu = [];
+    data.forEach(function() {
+      if (prdid == data[index].prdid) {
+        thirdMenu.push({
+          prdid: data[index].prdid,
+          prdname: data[index].prdname,
+          prddes:data[index].prddes,
+          picaddr: data[index].picaddr,
+          price: data[index].price
+        });
+      }
+      index++;
+    });
+
+    that.setData({
+      thirdMenu: thirdMenu
+    });
+  },
+
+  /* 三级菜单-商品列表点击跳转&页面数据传递 */
+  threeMenuHandel:function(event) {
+    var prdid = event.currentTarget.dataset.id;
   }
 })

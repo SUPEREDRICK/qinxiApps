@@ -1,45 +1,58 @@
 <!--pages/editInfo/editInfo.wxml-->
-<image src='http://i1.fuimg.com/650899/3232d9535286dfd6.jpg' class='logo'></image>
-<view class='phoneNumber'>手机号码<text>*</text></view>
-<input type='text' class='phoneNumInput'></input>
+<view class='logo'>
+  <open-data type="userAvatarUrl" class='logobox'></open-data>
+</view>
+
+<view class='infomation'>
+  <text class='field'>手机</text>
+  <text class='star'>*</text>
+  <input type='text' class='fileSet' bindinput='inputphonenum'></input>
+</view>
 <view class='intro'>如需修改手机号码,请致电400-880-1515</view>
 
 <view class='infomation'>
   <text class='field'>姓名</text>
   <text class='star'>*</text>
-  <input type='text' class='fileSet'></input>
+  <input type='text' class='fileSet' bindinput='inputname'></input>
 </view>
 
-<picker bindchange="bindChange" value="{{index}}" range="{{sex}}" range-key="name" class='selectSex'>
+<picker bindchange="inputsex" value="{{index}}" range="{{sex}}" range-key="name" class='selectSex'>
     <view>
       性别:{{sex[index].name}}
     </view>
 </picker>
 
 <view class='infomation'>
-  <text class='field'>生日</text>
+  <text class='field'>生日:</text>
   <text class='star'>*</text>
-  <input type='text' class='fileSet' placeholder="1990-01-01"></input>
+  <input type='text' class='fileSet' placeholder="1990-01-01" bindinput='inputbirthday'></input>
 </view>
 
-<picker bindchange="bindChange" value="{{index}}" range="{{province}}" class='selectSex'>
+<picker bindchange="inputprovince" value="{{index}}" range="{{province}}" range-key="area_name" class='selectSex'>
     <view>
-      省份:{{province[index]}}
+      省份:<text>{{selectedProvince}}</text>
+      <!-- <input placeholder='请选择' value='{{province[index].id}}'></input> -->
     </view>
 </picker>
 
-<picker bindchange="bindChange" value="{{index}}" range="{{province}}" class='selectSex'>
+<picker bindchange="inputcity" value="{{index}}" range="{{city}}" range-key="area_name" class='selectSex'>
     <view>
-      城市:{{province[index]}}
+      城市:<text>{{selectedcity}}</text>
     </view>
 </picker>
 
 <view class='infomation'>
-  <text class='field'>邮箱</text>
-  <text class='star'>(选填)</text>
-  <input type='text' class='fileSet' placeholder='请输入邮箱'></input>
+  <text class='field'>地址:</text>
+  <text class='star'>*</text>
+  <input type='text' class='fileSet' placeholder='请输入地址' bindinput='inputaddress'></input>
 </view>
 
-<view class='submited'>提交修改</view>
+<view class='infomation'>
+  <text class='field'>邮箱</text>
+  <text class='star'>(选填)</text>
+  <input type='text' class='fileSet' placeholder='请输入邮箱' bindinput='inputemail'></input>
+</view>
+
+<view class="{{exchange == true ? 'submitend' : 'submitsatrt'}}" bindtouchstart='touchedstart' bindtouchend='touchedend' bindtap=''>提交修改</view>
 
 <view class='announce'>亲爱的用户,以上个人信息将帮助我们为您订制会员福利,请您尽量准确提供,谢谢！</view>

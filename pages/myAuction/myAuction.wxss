@@ -60,9 +60,9 @@
 .date {
   font-size: 25rpx;
   color: rgba(128, 128, 128, 0.466);
-  float: left;
-  margin-top: 85rpx;
-  margin-left: -115rpx;
+  float: right;
+  margin-top: 20rpx;
+  margin-right: 10rpx;
 }
 
 .auStatusImg {

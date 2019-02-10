@@ -6,10 +6,10 @@ Page({
    */
   data: {
     imgUrls: [
-      "/pages/images/sw1.png",
-      "/pages/images/sw2.png",
-      "/pages/images/sw3.png",
-      "/pages/images/sw4.png"
+      "http://i2.tiimg.com/650899/092deafe2e513bc3.png",
+      "http://i2.tiimg.com/650899/387e02e04fba24d2.png",
+      "http://i2.tiimg.com/650899/1cabe4c0157f8e1a.png",
+      "http://i2.tiimg.com/650899/9e6c74124756e35b.png"
     ],
     indicatorDots: true,  //是否显示面板指示点
     autoplay: true,      //是否自动切换
@@ -17,40 +17,66 @@ Page({
     duration: 1000,       //滑动动画时长
     inputShowed: false,
     inputVal: "",
-
-    willAuctions: [
-      {
-        id:'index1',
-        prdtype:'选项'
-      },
-      {
-        id: 'index1',
-        prdtype: '选项'
-      },
-      {
-        id: 'index1',
-        prdtype: '选项'
-      },
-      {
-        id: 'index1',
-        prdtype: '选项'
-      },
-      {
-        id: 'index1',
-        prdtype: '选项'
-      },
-      {
-        id: 'index1',
-        prdtype: '选项'
-      }
-    ]
+    willAuctions:['1', '2', '3', '4'],
+    autionInfo:[],
+    onAuctionInfo:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this
+    var auid = options.auid;
+    wx.request({
+      method:'post',
+      dataType:'text',
+      data:{
+        auid: auid
+      },
+      url: 'http://www.yucuifu.com/tomcat/supered/qryAuctionDtl',
+      header:{
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      success:function(res) {
+        console.log('--------->----->' + res.data);
+        var data = JSON.parse(res.data)[0];
+        that.setData({
+          autionInfo:data
+        });
+      },
+      fail: function (res) {
 
+      },
+      complete: function (res) {
+
+      }
+    });
+
+    auid = 'au201901192114';
+    wx.request({
+      method: 'post',
+      dataType: 'text',
+      data: {
+        auid: auid
+      },
+      url: 'http://www.yucuifu.com/tomcat/supered/qryUserOnAuction',
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      success: function (res) {
+        var onAuctionInfo = JSON.parse(res.data);
+        that.setData({
+          onAuctionInfo: onAuctionInfo
+        });
+      },
+      fail: function (res) {
+
+      },
+      complete: function (res) {
+
+      }
+    })
   },
 
   /**

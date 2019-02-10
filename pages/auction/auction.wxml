@@ -7,20 +7,20 @@
     <view class="{{options[0].selected == true ? 'selected' : ''}}"></view>
   </view>
   <view class='switch-right' bindtap='selectOPt' data-option="option_right">
-    <view>{{options[0].name}}</view>
+    <view>{{options[1].name}}</view>
     <view class="{{options[1].selected == true ? 'selected' : ''}}"></view>
   </view>
 </view>
 
 <!-- 拍卖的商品列表 -->
 <scroll-view scroll-y='true' class="scroll-x">
-        <view wx:for="{{auctions}}" wx:key="{{index}}" class="view-parent">
+        <view wx:for="{{selections}}" wx:key="{{index}}" class="view-parent">
           <!-- 初始版本 -->
           <!-- <view class="view-item" data-id="{{item.prdtype}}" bindtap='toprdlist'>{{item.auctiontype}}</view> -->
           <!-- 第二版本 -->
-          <view class="view-item" data-id="{{item.prdtype}}" bindtap='toAuDtl'>
-            <image src='http://i1.fuimg.com/650899/32db51d22a2d65f5.jpg' class='au_pic'></image>
-            <view class='auprdname'>{{item.auctiontype}}</view>
+          <view class="view-item" data-id="{{item.auid}}" bindtap='toAuDtl'>
+            <image src='{{item.acpic}}' class='au_pic'></image>
+            <view class='auprdname'>{{item.acname}}</view>
             <view class='auprdprice'>￥{{item.price}}</view>
             <image src='http://i1.fuimg.com/650899/bdc961c520072113.png' class='hotimg'></image>
             <view class='hot'>{{item.hot}}</view>

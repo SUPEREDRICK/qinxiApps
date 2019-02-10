@@ -1,18 +1,20 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/auction/auction",
+    "pages/auctionDtl/auctionDtl",
+    "pages/editInfo/editInfo",
+    "pages/collection/collection",
+    "pages/myAuction/myAuction",
     "pages/MyCoupon/MyCoupon",
+    "pages/coupondtl/coupondtl",
+    "pages/shop/shop",
+    "pages/payDeposit/payDeposit",
+    "pages/DeliveryOrder/DeliveryOrder",
+    "pages/shopcart/shopcart",
     "pages/shopdtl/shopdtl",
     "pages/OrderStatus/OrderStatus",
-    "pages/transactionDetails/transactionDetails",
-    "pages/DeliveryOrder/DeliveryOrder",
-    "pages/myAuction/myAuction",
-    "pages/shopcart/shopcart",
-    "pages/auctionDtl/auctionDtl",
-    "pages/auction/auction",
-    "pages/collection/collection",
-    "pages/editInfo/editInfo",
-    "pages/shop/shop"
+    "pages/transactionDetails/transactionDetails"
   ],
   "window": {
     "navigationBarBackgroundColor": "#38634f",
@@ -39,40 +41,9 @@
       },
       {
         "pagePath": "pages/auction/auction",
-        "text": "拍卖",
+        "text": "捡宝",
         "iconPath": "./pages/images/auction.png",
         "selectedIconPath": "./pages/images/auctioning.png"
-      }
-    
-    ],
-    "details":[
-      {
-        "pagePath": "pages/OrderStatus/OrderStatus",
-        "text": "拍卖"
-      },
-      {
-        "pagePath": "pages/store/store",
-        "text": "我去过的店"
-      },
-      {
-        "pagePath": "pages/Fans/Fans",
-        "text": "我的粉丝"
-      },
-      {
-        "pagePath": "pages/DeliveryOrder/DeliveryOrder",
-        "text": "配送订单"
-      },
-      {
-        "pagePath": "pages/transactionDetails/transactionDetails",
-        "text": "交易详情"
-      },
-      {
-        "pagePath": "pages/MyCoupon/MyCoupon",
-        "text": "我的优惠券"
-      },
-      {
-        "pagePath": "pages/personalstores/personalstores",
-        "text": "我的店铺"
       }
     ]
   }

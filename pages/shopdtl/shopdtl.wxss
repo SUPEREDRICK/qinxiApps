@@ -22,7 +22,6 @@
 /* 产品名称 */
 .prdname {
   margin-top: 10rpx;
-  float: left;
   margin-left: 15rpx;
   font-weight: bold;
   color: #38634f;

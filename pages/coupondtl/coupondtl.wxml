@@ -1,0 +1,41 @@
+<!--pages/coupondtl/coupondtl.wxml-->
+<view class='blank'></view>
+<view class="coupon-list">
+    <view class="item stamp stamp01">
+        <!-- 左侧 -->
+        <view class="float-li t1">
+            <view class="coupon-left">
+                <view class="t t1">￥</view>
+                <view class="t t2">200</view>
+                <view class="t t3">新人专享全场超200减200</view>
+                <view class="t t4">优惠券编号：264669616164</view>
+            </view>
+            <!-- 右侧 -->
+            <view class="float-li-rig">
+            <view class="cp-right">
+              <view class='valid-date'>有效期</view>
+              <view class='date-value-start'>2019-01-19</view>
+              <view class='date-value-end'>2020-02-19</view>
+            </view>
+            </view>
+            <i></i>
+        </view>
+    </view>
+</view>
+<!-- 图文 -->
+<view class='discount-box'>
+  <view>
+    <text class='discount-info'>·优惠说明</text>
+    <text class='discount-content'>会员凭券可以获取新人优惠200现金抵押</text>
+  </view>
+  <view>
+    <text class='discount-info'>·有效日期</text>
+    <text class='discount-content'>领取日起一年内有效</text>
+  </view>
+  <view>
+    <text class='discount-info'>·可用时段</text>
+    <text class='discount-content'>全日可用</text>
+  </view>
+</view>
+<!-- 底部按钮 -->
+<view class='button' bindtap='toexchange'>马上兑换</view>

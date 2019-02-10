@@ -50,9 +50,9 @@
 .name {
   display: flex;
   align-items: center;
-  width: 160rpx;
+  width: 202rpx;
   height: 40rpx;
-  margin-left: 14rpx;
+  margin-left: 5rpx;
   font-weight: 400;
  
 }
@@ -143,4 +143,11 @@ background: linear-gradient(to right, rgba(255, 255, 255, 0),#DDDDDD,rgba(255,25
 /* 消除按钮边框 */
 button::after {
   border: none;
+}
+
+/* 授权登陆按钮 */
+.auth {
+  font-size: 25rpx;
+  width: 200rpx;
+  background-color: rgba(0, 0, 0, 0);
 }

@@ -70,7 +70,7 @@
   color: #d8d4d4;
   float: left;
   margin-top: 140rpx;
-  margin-left: -177rpx;
+  margin-left: -236rpx;
 }
 
 .dot {

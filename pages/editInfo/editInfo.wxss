@@ -1,14 +1,21 @@
 /* pages/editInfo/editInfo.wxss */
 
 .logo {
-  width: 70rpx;
-  height: 70rpx;
-  display: block;
   margin: 0 auto;
   margin-top: 10rpx;
 }
 
-.phoneNumber {
+.logobox {
+  width: 100rpx;
+  height:100rpx;
+  border-radius:50%;
+  display: flex;
+  overflow:hidden;
+  margin-top: 10rpx;
+  margin: 0 auto;
+}
+
+/* .phoneNumber {
   font-size: 30rpx;
   margin-left: 30rpx;
   float: left;
@@ -18,17 +25,17 @@
 .phoneNumber text {
   color: #38634f;
   font-size: 30rpx;
-}
+} */
 
-.phoneNumInput {
+/* .phoneNumInput {
   width: 495rpx;
   height: 45rpx;
   border-bottom: 1rpx solid rgba(211, 208, 208, 0.596);
-  float:left;
+  display: block;
   margin-left: 20rpx;
   margin-top: 22rpx;
   font-size: 20rpx;
-}
+} */
 
 .intro {
   color: rgba(211, 208, 208, 0.596);
@@ -76,10 +83,24 @@
   font-size: 30rpx;
 }
 
-.submited {
+.submitsatrt {
   width: 685rpx;
   height: 70rpx;
   background-color: black;
+  float: left;
+  margin-left: 32rpx;
+  margin-top: 30rpx;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 33rpx;
+}
+
+.submitend {
+  width: 685rpx;
+  height: 70rpx;
+  background-color: #363232;
   float: left;
   margin-left: 32rpx;
   margin-top: 30rpx;
@@ -102,4 +123,12 @@
  text-align: center;
  font-size: 25rpx;
  color: rgba(211, 208, 208, 0.596);
+}
+
+/* 头像 */
+.headpic {
+  width: 100rpx;
+  height: 100rpx;
+  display: block;
+  
 }

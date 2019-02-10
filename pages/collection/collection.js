@@ -15,7 +15,7 @@ Page({
       },
       {
         id: 'option_right',
-        name: '拍卖收藏',
+        name: '团购收藏',
         style: 'switch-right',
         slelected: false
       }
@@ -143,14 +143,36 @@ Page({
         hot: 169,
         auctiontype: '捡漏2'
       }
-    ]
+    ],
+    collection:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+    var openid = wx.getStorageSync('user').openid;
+    wx.request({
+      url: 'http://www.yucuifu.com/tomcat/supered/qryCollection',
+      data: {
+        openid: openid,
+        option: 'shop'
+      },
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      method: 'post',
+      dataType: 'text',
+      success: function (res) {
+        var collection = JSON.parse(res.data);
+        that.setData({
+          collection:collection
+        });
+      },
+      fail: function (res) {},
+      complete: function (res) {}
+    });
   },
 
   /**
@@ -205,6 +227,7 @@ Page({
   /* 用户点击顶选择顶部选项 */
   selectOPt: function (event) {
     var that = this
+    /* 样式·切换 */
     const selecteds = that.data.options;
     var selected = event.currentTarget.dataset.option;
     if (selected == 'option_left') {
@@ -216,6 +239,72 @@ Page({
     }
     that.setData({
       options: selecteds
-    })
+    });
+    
+    /* 数据渲染 */
+    var openid = wx.getStorageSync('user').openid;
+    if (selected == 'option_left') {
+      wx.request({
+        url: 'http://www.yucuifu.com/tomcat/supered/qryCollection',
+        data: {
+          openid: openid,
+          option: 'shop'
+        },
+        header: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        method: 'post',
+        dataType: 'text',
+        success: function (res) {
+          var collection = JSON.parse(res.data);
+          that.setData({
+            collection: collection
+          });
+        },
+        fail: function (res) { },
+        complete: function (res) { }
+      });
+    } else if(selected == 'option_right') {
+      wx.request({
+        url: 'http://www.yucuifu.com/tomcat/supered/qryCollection',
+        data: {
+          openid: openid,
+          option: 'auction'
+        },
+        header: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        method: 'post',
+        dataType: 'text',
+        success: function (res) {
+          var collection = JSON.parse(res.data);
+          that.setData({
+            collection: collection
+          });
+        },
+        fail: function (res) {},
+        complete: function (res) {}
+      });
+    }
+  },
+  /* 用户点击跳转到商品详情页面 */
+  toAuDtl: function(event) {
+     var prdid = event.currentTarget.dataset.id;
+     var collectiontype = event.currentTarget.dataset.type;
+    if (collectiontype == 'shop') {
+      wx.navigateTo({
+        url: '/pages/shopdtl/shopdtl?id=' + prdid,
+        success:function() {},
+        fail:function() {},
+        complete: function() {}
+      })
+    } else if(collectiontype == 'auction') {
+      wx.navigateTo({
+        url: '/pages/auctionDtl/auctionDtl?auid=' + prdid,
+        success: function () { },
+        fail: function () { },
+        complete: function () {}
+      })
+    }
   }
 })

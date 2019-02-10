@@ -8,31 +8,42 @@ Page({
     specialChar:'>',
     items:[
       {
-        id:'1'
+        id:'1',
+        prdname:'冰种云南飘翠手镯'
       },
       {
-        id: '2'
-      },
-      {
-        id: '3'
-      },
-      {
-        id: '4'
-      },
-      {
-        id: '5'
-      },
-      {
-        id: '6'
+        id: '2',
+        prdname: '糯种和田玉无事牌'
       }
-    ]
+    ],
+    deposit:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+    var openid = wx.getStorageSync("user").openid;
+    wx.request({
+      url: 'http://www.yucuifu.com/tomcat/supered/qryDeposit',
+      data: {
+        openid:openid
+      },
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      method: 'post',
+      dataType: 'text',
+      success:function(res) {
+        var deposit = JSON.parse(res.data)[0].deposit;
+        that.setData({
+          deposit: deposit
+        });
+      },
+      fail: function (res) {},
+      complete:function() {}
+    })
   },
 
   /**
@@ -82,5 +93,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /* 点击跳转到支付页面 */
+  toPayDeposit:function() {
+    wx.navigateTo({
+      url: '/pages/payDeposit/payDeposit'
+    });
   }
 })

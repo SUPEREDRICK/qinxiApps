@@ -6,6 +6,7 @@
     <view>{{options[0].name}}</view>
     <view class="{{options[0].selected == true ? 'selected' : ''}}"></view>
   </view>
+
   <view class='switch-right' bindtap='selectOPt' data-option="option_right">
     <view>{{options[1].name}}</view>
     <view class="{{options[1].selected == true ? 'selected' : ''}}"></view>
@@ -14,15 +15,15 @@
 
 <!-- 拍卖的商品列表 -->
 <scroll-view scroll-y='true' class="scroll-x">
-        <view wx:for="{{auctions}}" wx:key="{{index}}" class="view-parent">
+        <view wx:for="{{collection}}" class="view-parent">
           <!-- 初始版本 -->
           <!-- <view class="view-item" data-id="{{item.prdtype}}" bindtap='toprdlist'>{{item.auctiontype}}</view> -->
           <!-- 第二版本 -->
-          <view class="view-item" data-id="{{item.prdtype}}" bindtap='toAuDtl'>
+          <view class="view-item" data-id="{{item.prdid}}" data-type="{{item.collectiontype}}" bindtap='toAuDtl'>
             <view class='dot'>· · ·</view>
-            <image src='http://i1.fuimg.com/650899/32db51d22a2d65f5.jpg' class='prdImg'></image>
-            <view class='prdName'>翡翠玉石收藏</view>
-            <view class='date'>2019-01-01 19:00:03</view>
+            <image src='{{item.picaddr}}' class='prdImg'></image>
+            <view class='prdName'>{{item.prdname}}</view>
+            <view class='date'>{{item.createtime}}</view>
           </view>
         </view>
 </scroll-view>

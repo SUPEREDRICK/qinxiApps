@@ -1,9 +1,9 @@
 <!--pages/myAuction/myAuction.wxml-->
 <!-- 顶部保证金部分 -->
-<view class='depositBox'>
+<view class='depositBox' bindtap='toPayDeposit'>
   <view class='guiding'>{{specialChar}}</view>
   <view class='deposit'>保证金总额</view>
-  <view class='price'>￥0.00</view>
+  <view class='price'>￥{{deposit}}</view>
 </view>
 <!-- 分割线 -->
 <view class='cuttingLine'></view>
@@ -15,7 +15,7 @@
     <image src='http://i1.fuimg.com/650899/5d517ff174ff0f12.png' class='auStatusImg'></image>
     
     <image src='http://i1.fuimg.com/650899/e7e59acaf515dca5.png' class='itemImg'></image>
-    <view class='prdName'>产品名称</view>
+    <view class='prdName'>{{item.prdname}}</view>
     <view class='date'>2019-01-01 12:00:01</view>
   </view>
   <!-- 分割线 -->

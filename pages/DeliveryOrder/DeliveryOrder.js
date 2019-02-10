@@ -43,7 +43,7 @@ Page({
     wx.request({
       method: 'post',
       dataType: 'text',
-      url: 'http://localhost:8080/qinxiApp/brieforder',
+      url: 'http://www.yucuifu.com/tomcat/supered/brieforder',
       data: {
         openid: JSON.stringify(openid)
       },
